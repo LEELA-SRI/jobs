@@ -104,8 +104,21 @@ section.container-fluid{
     margin-top:3rem;
     padding:1rem
 }
+.life-at-1,.learn-more-1{
+    background: #f2f2f2;
+    padding:1rem;
+    margin-top: 1rem;
+    margin-right:1rem;
+    width:48%
+}
+.learn-more{
+    background: #f2f2f2
+}
 @media (max-width:767px){
     .qualifications .apply-now{
+        width:100%
+    }
+    .life-at-1{
         width:100%
     }
 }
