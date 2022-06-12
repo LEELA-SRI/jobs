@@ -1,18 +1,22 @@
 *{
     box-sizing: border-box;
+    
 }
-body{
-   
-    width:100vw
-}
+
 section.container-fluid{
     line-height:1.6em !important;
-    padding:3rem 1.25rem !important;
+    padding:1.75rem 1.25rem !important;
+    font-size:1rem
+    
+}
+section.container{
+    line-height:1.6em !important;
+    /* padding:1.75rem 1.25rem !important; */
     font-size:1rem
     
 }
 .row{
-    padding:0 1.25rem
+    padding:1.25rem 0
 }
 .banner-section{
     background:#F2F2F2;
@@ -88,7 +92,7 @@ section.container-fluid{
 }
 .related-jobs-card{
     margin-top:1rem;
-    margin-right:1rem;
+    
     padding:1rem;
     border:1px solid #ccc;
     border-left:0.25rem solid #ff00d6
@@ -104,34 +108,85 @@ section.container-fluid{
     margin-top:3rem;
     padding:1rem
 }
-.life-at-1,.learn-more-1{
+.life-at-1{
     background: #f2f2f2;
     padding:1rem;
-    margin-top: 1rem;
-    margin-right:1rem;
-    width:48%
+    margin-top: 5rem;
+    
 }
+
 .learn-more{
-    background: #f2f2f2
+    background: #f2f2f2;
+    line-height: 1.5rem;
+    
 }
-@media (max-width:767px){
-    .qualifications .apply-now{
-        width:100%
-    }
-    .life-at-1{
-        width:100%
-    }
+.stay-1{
+    padding:1rem;
+    border:2px solid #ccc;
+    border-right: 4px solid rgb(135, 135, 135);
+    border-bottom:4px solid rgb(135, 135, 135);
+    margin-top:5rem;
+    margin-bottom: 2rem;
+    
+
+}.img-stat{
+    width:6rem;
+    height:6rem;
+    margin-top: -7rem;
 }
+.line-clamp {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
+    box-shadow: 0 8px 6px -6px #d4d0d0;
+  }
+
 @media (max-width:991px){
+    
     .banner-section .register,.banner-section .share{
         padding-top:1.5rem
     }
     .banner-section .apply-now{
     width:100%
+    }
+.img-stat{
+    width:5rem;
+    height:5rem;
+    
 }
+}
+@media (max-width:767px){
+    .qualifications .apply-now{
+        width:100%
+    }
+    .qualifications .register{
+        padding-top: 1.5rem;
+    }
+    .img-stat{
+        width:6rem;
+        height:6rem
+    }
+    section.container-fluid{
+        padding:1rem !important
+    }
+    section.container{
+        padding:1rem !important
+    }
+}
+@media (max-width:567px){
+    .about-job{
+        padding:1.8rem 0.5rem 0 0;
+        margin:0 -1rem
+    }
 }
 @media (min-width:1024px){
     .banner-section{
         margin-top:70px
+    }
+    .row{
+        max-width:78rem;
+        margin-left: auto;
+        margin-right:auto
     }
 }

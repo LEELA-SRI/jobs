@@ -1401,7 +1401,7 @@
 
 
 <!-- banner section -->
-<section class="container-xl banner-section">
+<section class="container-fluid banner-section">
     <div class="row ">
         <div class="col-12 col-sm-12 col-md-8">
             <div class="d-flex flex-column gap-4 fw-bold">
@@ -1435,7 +1435,7 @@
 <!-- banner sec ends -->
 
 <!-- kinda main section -->
-<section class="container-xl main-sec">
+<section class="container-fluid main-sec">
     <div class="row ">
         <div class="col-md-12 col-lg-8">
             <div class="job-desc col-12">
@@ -1444,7 +1444,7 @@
                     <b>About Techsnap : </b>Accenture is a global professional services company with leading capabilities in digital, cloud and security. Combining unmatched experience and specialized skills across more than 40 industries, we offer Strategy and Consulting, Technology and Operations services and Accenture Song-all powered by the world's largest network of Advanced Technology and Intelligent Operations centers. Our 699,000 people deliver on the promise of technology and human ingenuity every day, serving clients in more than 120 countries. We embrace the power of change to create value and shared success for our clients, people, shareholders, partners and communities.
                     <a href="technap.in">visit us at techsnap.in</a>
                 </div>
-                <div class="about-job">
+                <div class="about-job about-whole">
                     <ul>
                         <li><b>Project Role :</b>Application Developer</li>
                         <li><b>Project Role Description :</b>Design, build and configure applications to meet business process and application requirements.</li>
@@ -1474,13 +1474,29 @@
                         </li>
                     </ul>
                 </div>
-                <div class="d-flex gap-2 align-items-center show-less fw-bold">
+                <div class="d-flex gap-2 align-items-center show-less show-less-func fw-bold">
                     <a>SHOW LESS</a><i class="fa-solid fa-arrow-right"></i>
                 </div>
-                <div class="d-flex gap-2 align-items-center show-more fw-bold d-none">
+                <div class="d-flex gap-2 align-items-center show-more show-more-func fw-bold d-none">
                     <a>SHOW MORE</a><i class="fa-solid fa-arrow-up"></i>
                 </div>
             </div>
+
+            <script>
+                const less=document.querySelector('.show-less-func')
+                const more=document.querySelector('.show-more-func')
+                const truncate=document.querySelector('.about-whole')
+                less.addEventListener('click',function(){
+                    less.classList.toggle('d-none')
+                    more.classList.toggle('d-none')
+                    truncate.classList.toggle('line-clamp')
+                })
+                more.addEventListener('click',function(){
+                    less.classList.toggle('d-none')
+                    more.classList.toggle('d-none')
+                    truncate.classList.toggle('line-clamp')
+                })
+            </script>
             <hr>
             <div class="qualifications col-12">
                 <h2 class="qualification fw-bold mb-3">Qualifications</h2>
@@ -1491,7 +1507,8 @@
                     <div class="imp-not-acc acc-1">
                         <div class="d-flex justify-content-between acc-head">
                             <div>Important Notice</div>
-                            <i class="fa-solid fa-angle-down"></i>
+                            <i class="fa-solid fa-angle-down downs"></i>
+                            <i class="fa-solid fa-angle-up ups d-none"></i>
                         </div>
                         <div class="acc-body d-none">
                             We have been alerted to the existence of fraudulent messages asking job seekers to set up payment to cover various costs associated with establishing employment at Accenture. No one is ever required to pay for employment at Accenture. If you are contacted by someone asking for payment, please do not respond, and contact us at india.fc.check@accenture.com immediately.
@@ -1500,9 +1517,10 @@
                     <div class="acc-2">
                         <div class="d-flex justify-content-between acc-head">
                             <div>Equal Employment Opportunity Statement</div>
-                            <i class="fa-solid fa-angle-down"></i>
+                            <i class="fa-solid fa-angle-down downs"></i>
+                            <i class="fa-solid fa-angle-up ups d-none"></i>
                         </div>
-                        <div class="acc-body">
+                        <div class="acc-body d-none">
                             All employment decisions shall be made without regard to age, race, creed, color, religion, sex, national origin,
                             ancestry, disability status, veteran status, sexual orientation, gender identity or expression, genetic information,
                             marital status, citizenship status or any other basis as protected by federal, state, or local law.
@@ -1527,6 +1545,20 @@
                 </div>
 
             </div>
+
+            <script>
+                const headOpen=document.querySelectorAll('.acc-head')
+                const bodyOpen=document.querySelectorAll('.acc-body')
+                const downsy=document.querySelectorAll('.downs')
+                const upsy=document.querySelectorAll('.ups')
+                for (let i=0;i<headOpen.length;i++){
+                headOpen[i].addEventListener('click',function(){
+                    downsy[i].classList.toggle('d-none')
+                    upsy[i].classList.toggle('d-none')
+                    bodyOpen[i].classList.toggle('d-none')
+
+                    })}
+            </script>
             <div class="socials col-12">
                 <div class="d-flex gap-4">
                     <div>SHARE</div>
@@ -1539,8 +1571,8 @@
         <div class="col-md-12 col-lg-4">
             <div class="row  justify-content-between">
                 <h2 class="text-capitalize">related jobs</h2>
-                <div class="col-sm-12 col-md-6 col-lg-12 related-jobs-card">
-                    <div class="d-flex flex-column gap-2">
+                <div class="col-sm-12 col-md-6 col-lg-12 ">
+                    <div class="d-flex flex-column gap-2 related-jobs-card">
                         <h4 class="text-capitalize">Manager-Human Resources</h4>
                         <div class="d-flex text-uppercase fw-bold">
                             <div class="location">India</div>
@@ -1555,8 +1587,8 @@
                         <a href="" class="text-decoration-none">Apply Now</a>
                     </div>
                 </div>
-                <div class="col-sm-12 col-md-5 col-lg-12 related-jobs-card">
-                    <div class="d-flex flex-column gap-2">
+                <div class="col-sm-12 col-md-6 col-lg-12">
+                    <div class="d-flex flex-column gap-2 related-jobs-card">
                         <h4 class="text-capitalize">Python- Django Developer</h4>
                         <div class="d-flex text-uppercase fw-bold">
                             <div class="location">India</div>
@@ -1571,8 +1603,8 @@
                         <a href="" class="text-decoration-none">Apply Now</a>
                     </div>
                 </div>
-                <div class="col-sm-12 col-md-6 col-lg-12 related-jobs-card">
-                    <div class="d-flex flex-column gap-2">
+                <div class="col-sm-12 col-md-6 col-lg-12 ">
+                    <div class="d-flex flex-column gap-2 related-jobs-card">
                         <h4 class="text-capitalize">Machine Learning Engineer</h4>
                         <div class="d-flex text-uppercase fw-bold">
                             <div class="location">India</div>
@@ -1588,7 +1620,7 @@
                         <a href="" class="text-decoration-none">Apply Now</a>
                     </div>
                 </div>
-                <div class="view-more-jobs ps-0 d-flex align-items-center gap-2">
+                <div class="view-more-jobs ps-3 d-flex align-items-center gap-2 show-less">
                     <a href="" class="text-decoration-none fw-bold ms-lg-auto">VIEW MORE JOBS</a><i class="fa-solid fa-arrow-right"></i>
                 </div>
             </div>
@@ -1597,7 +1629,8 @@
 </section>
 <!-- kinda main sec ends -->
 
-<section class="container-xl brag-sec">
+<section class="container-fluid brag-sec">
+    <div class="row">
     <h2>What people are saying about us</h2>
     <div class="container brag-card d-flex flex-column gap-2 gap-md-3 gap-lg-4 justify-content-center">
         <h2 class="review">"Best Company to work with"</h2>
@@ -1608,15 +1641,20 @@
             <a>MORE ACCENTURE INDIA RATINGS & REVIEWS</a><i class="fa-solid fa-arrow-right"></i>
         </div>
     </div>
+    </div>
 
 </section>
 
-<section class="container-xl life-at">
+<section class="container-fluid life-at">
     <div class="row">
         <h1 class="fw-bold">Life at Accenture</h1>
-        <p class="about-life-at">Work where you're inspired to explore your passions and where your talents are nurtured and cultivated. Innovate with leading-edge technologies on some of the coolest projects you can imagine.</p>
-        <div class="d-flex">
+        <p class="about-life-at mb-4">Work where you're inspired to explore your passions and where your talents are nurtured and cultivated. Innovate with leading-edge technologies on some of the coolest projects you can imagine.</p>
+        
+        <div class="col-12 col-md-6">
         <div class="d-flex flex-column gap-md-3 life-at-1">
+            <div>
+                <img class="img-fluid img-stat" src="https://www.accenture.com/t20190415T112950Z__w__/in-en/_acnmedia/Accenture/Redesign-Assets/Careers/Images/Icons/1/Accenture-Workplace-Flexibility-150x150.png">
+            </div>
             <h3>Training and Development</h3>
             <p>Take time away to learn and learn all the time in our regional learning hubs, connected classrooms,
                 online courses and learning boards.</p>
@@ -1624,24 +1662,31 @@
                 <a>LEARN MORE</a><i class="fa-solid fa-arrow-right"></i>
             </div>
         </div>
+        </div>
+        <div class="col-12 col-md-6">
         <div class="d-flex flex-column gap-md-3 life-at-1">
+            <div>
+                <img class="img-fluid img-stat" src="https://www.accenture.com/t20190422T092402Z__w__/in-en/_acnmedia/Accenture/Redesign-Assets/Careers/Images/Icons/1/Accenture-Environment-150x150.png">
+            </div>
             <h3>Work Environment</h3>
             <p>Be your best every day in a work environment that helps drive innovation in everything you do.</p>
             <div class="d-flex gap-2 align-items-center show-less fw-bold">
                 <a>LEARN MORE</a><i class="fa-solid fa-arrow-right"></i>
             </div>
-        </div>
+        </div></div>
+    
         </div>
     </div>
 
 </section>
 
-<section class="container-xl learn-more">
+<section class="container-fluid learn-more">
     <div class="row">
         <h1 class="fw-bold">Learn more about Accenture</h1>
         <p class="about-learn-more">Our more than 600,000 people in more than 120 countries, combine unmatched experience and specialized skills across more than 40 industries. We embrace the power of change to create value and shared success for our clients, people, shareholders, partners and communities.</p>
-        <div class="d-flex">
-        <div class="d-flex flex-column gap-md-3 learn-more-1">
+        
+        <div class="col-12 col-md-6 ">
+        <div class="d-flex flex-column gap-md-2 learn-more-1">
             <img class="img-fluid" src="https://www.accenture.com/t20201020T024153Z__w__/in-en/_acnmedia/Accenture/Redesign-Assets/Careers/Images/Content_Images/1/Accenture-Expertise-new1.jpg">
             <h3>Our Expertise</h3>
             <p>See how we embrace the power of change to create value and shared success for our clients, people, shareholders, partners and communities.</p>
@@ -1649,7 +1694,9 @@
                 <a>FIND OUT MORE</a><i class="fa-solid fa-arrow-right"></i>
             </div>
         </div>
-        <div class="d-flex flex-column gap-md-3 learn-more-1">
+        </div>
+        <div class="col-12 col-md-6 ">
+        <div class="d-flex flex-column gap-md-2 learn-more-1">
             <img class="img-fluid" src="https://www.accenture.com/t20201020T023931Z__w__/in-en/_acnmedia/Accenture/Redesign-Assets/Careers/Images/Content_Images/1/Accenture-Meet-Our-People-660x330.jpg">
             <h3>Meet Our People</h3>
             <p>From entry-level to leadership, across all business and industry segments, get to know our people harnessing technology to make a difference, every day.</p>
@@ -1658,6 +1705,53 @@
             </div>
         </div>
         </div>
+        
+        </div>
+    </div>
+
+</section>
+
+<section class="container-fluid stay-connected-sec">
+    <div class="row">
+        <h1 class="fw-bold pb-2 mb-5">Stay Connected</h1>
+        
+        <div class="col-12 col-md-6 col-lg-4">
+        <div class="d-flex flex-column gap-md-3 stay-1">
+            <div>
+                <img class="img-fluid img-stat" src="https://www.accenture.com/t20210505T091044Z__w__/in-en/_acnmedia/Accenture/Redesign-Assets/Careers/Images/Icons/1/Accenture-Join-our-Team-150x150.png">
+            </div>
+            <h3>Join Our Team</h3>
+            <p>Search open positions that match your skills and interest. We look for passionate, curious, creative and solution-driven team players.</p>
+            <div class="d-flex gap-2 align-items-center show-less fw-bold">
+                <a>SEARCH ACCENTURE JOBS</a><i class="fa-solid fa-arrow-right"></i>
+            </div>
+        </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+        <div class="d-flex flex-column gap-md-3 stay-1">
+            <div>
+                <img class="img-fluid img-stat" src="https://www.accenture.com/t20210505T091042Z__w__/in-en/_acnmedia/Accenture/Redesign-Assets/Careers/Images/Icons/1/Accenture-Keep-up-to-Date-150x150.png">
+            </div>
+            <h3>Keep Up to Date</h3>
+            <p>Stay ahead with careers tips, insider perspectives, and industry-leading insights you can put to use today–all from the people who work here.</p>
+            <div class="d-flex gap-2 align-items-center show-less fw-bold">
+                <a>READ CAREERS BLOG</a><i class="fa-solid fa-arrow-right"></i>
+            </div>
+        </div></div>
+        <div class="col-12 col-md-6 col-lg-4">
+        <div class="d-flex flex-column gap-md-3 stay-1">
+            <div>
+                <img class="img-fluid img-stat" src="https://www.accenture.com/t20210505T091041Z__w__/in-en/_acnmedia/Accenture/Redesign-Assets/Careers/Images/Icons/1/Accenture-Stay-Connected-150x150.png">
+            </div>
+            <h3>Job Alert Emails</h3>
+            <p>Personalize your subscription to receive job alerts, latest news and insider tips tailored to your preferences. See what exciting and rewarding opportunities await.</p>
+            <div class="d-flex gap-2 align-items-center show-less fw-bold">
+                <a>REGISTER FOR JOB ALERTS</a><i class="fa-solid fa-arrow-right"></i>
+            </div>
+        </div>
+        </div>
+        
+        </div>
     </div>
 
 </section>
@@ -1673,8 +1767,6 @@
 
 
 
-
-<br><br><br><br><br>
 
 
         <div class="footer_MainBox">
